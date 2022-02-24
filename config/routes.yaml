@@ -1,0 +1,23 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+homepage:
+    path: /
+    controller: App\Controller\HomepageController::preview
+
+category:
+    path: /Category/
+    controller: App\Controller\CategoryController::category_preview
+
+symfony_desc_get:
+    path: /symfonydesc
+    controller: App\Controller\SymfonyDescriptionController::getSymfonyDesc
+
+symfony_desc_create:
+    path: /symfonydesc?{header}&{description}
+    controller: App\Controller\SymfonyDescriptionController::createSymfonyDesc
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-100">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ page_title }}</title>
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+        <link rel="stylesheet" type="text/css" href="/styles/homepage.css">
+    </head>
+    <body class="cover-body d-flex h-100 text-center text-white">
+        {% block body %}
+            <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="mb-auto">
+                <div>
+                    <h3 class="float-md-start mb-0">{{ header_title }}</h3>
+                    <nav class="nav nav-masthead justify-content-center float-md-end">
+                        <a class="nav-link active" aria-current="page" href="{{ path('homepage') }}">Главная страница</a>
+                        <a class="nav-link" href="{{ path('homepage') }}Каталог/">Каталог</a>
+                        <a class="nav-link" href=".">Вернуться к резюме</a>
+                    </nav>
+                </div>
+            </header>
+
+            <main class="px-3">
+                <h1>Визуальное резюме</h1>
+                <p class="lead">Визуальное резюме с примерами исходного кода для большей наглядности.</p>
+                <p class="lead">
+                    <a href="/Category/" class="btn btn-lg btn-secondary fw-bold border-white">Подробнее</a>
+                </p>
+            </main>
+            <footer class="mt-auto text-white-50">
+                <p>Создано с помощью <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>.</p>
+            </footer>
+        </div>
+        {% endblock %}
+    </body>
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+
+</html>
