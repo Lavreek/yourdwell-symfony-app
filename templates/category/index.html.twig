@@ -66,13 +66,6 @@
                     	{% for card in cards %}
                     		{{ placeCards(card) }}
                     	{% endfor %}
-
-                    	
-                        <!-- <?php /*  Learn PHP/REST  */
-                            require_once "control.php";
-                            $control = new Control();
-                            $control->placeCards();
-                        ?> -->
                     </div>
                 </div>
             </div>
@@ -81,11 +74,28 @@
                 <div class="row py-lg-5">
                     <div class="col-lg-6 col-md-8 mx-auto">
                         <h1 class="fw-light">Примеры кода</h1>
-                        <p class="lead text-muted">Ниже приведены примеры отображения и получения данных для отображения данной страницы.</p>
-                        <a href="." style="color: grey;">GitHub</a>
+                        <p class="lead text-muted">Ссылка на исходный код Symfony.</p>
+                        <a href="https://github.com/Lavreek/yourdwell-symfony-app.git" style="color: grey;">GitHub</a>
                     </div>
                 </div>
             </section>
+
+            <div class="container marketing">
+                <div class="row justify-content-center" style="text-align: center;">
+                    <div class="col-lg-4">
+                        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{  asset('/images/symfony.png') }}" /> 
+                        <h2>Symfony CLI</h2>
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{  asset('/images/npm.svg') }}" /> 
+                        <h2>npm</h2>
+                    </div>
+                    <div class="col-lg-4"> 
+                        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{  asset('/images/composer.png') }}" /> 
+                        <h2>Composer</h2>
+                    </div>
+                </div>
+            </div> 
         </main>
 
         <footer class="text-muted py-5">
