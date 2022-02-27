@@ -23,7 +23,8 @@ a .nav-link:hover, a .nav-link:focus {
 	border-bottom-color: #fff;
 }
 
-.cover-body {
+body {
+	color: white;
 	text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 	box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 	background: #6c2d2c;

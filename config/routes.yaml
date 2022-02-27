@@ -6,9 +6,13 @@ homepage:
     path: /
     controller: App\Controller\HomepageController::preview
 
-category:
-    path: /Category/
-    controller: App\Controller\CategoryController::category_preview
+Catalog:
+    path: /Catalog
+    controller: App\Controller\CatalogController::index
+
+Database&Doctrine:
+    path: /Database&Doctrine
+    controller: App\Controller\DatabaseDoctrineController::index
 
 symfony_desc_get:
     path: /symfonydesc

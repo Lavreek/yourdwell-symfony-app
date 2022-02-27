@@ -8,24 +8,24 @@
 	use Doctrine\Persistence\ManagerRegistry;
 	use Symfony\Component\HttpClient\HttpClient;
 
-	class CategoryController extends AbstractController
+	class CatalogController extends AbstractController
 	{
 		const header_title = "YourDwell";
-		const page_title = "HH Category";
+		const page_title = "HH Catalog";
 		private $connection_type = "";
 
 		/**
-		* @Route("/Category/")
+		* @Route("/Catalog")
 		*/
-	    public function category_preview(ManagerRegistry $doctrine): Response
+	    public function index(ManagerRegistry $doctrine): Response
 	    {	
 	    	$this->getHTTPClientConnection();
 	    	$cards = $this->getDatabaseConnection($doctrine);
 
-	        return $this->render('category/index.html.twig', [
+	        return $this->render('catalog/index.html.twig', [
 	        	'cards' => $cards,
-            	'page_title' => CategoryController::page_title,
-            	'header_title' => CategoryController::header_title,
+            	'page_title' => CatalogController::page_title,
+            	'header_title' => CatalogController::header_title,
             	'type' => null,
         	]);
 	    }
