@@ -1,0 +1,48 @@
+<main>
+	<div class="container marketing">
+		<section class="py-5 container">
+			<div class="row">
+				<div class="col mx-auto">
+					<h1 class="fw-light py-3">Строка соединения</h1>
+					<p class="lead text-center text-muted">DATABASE_URL="mysql://host1821032_hhrestuser:Aa123123123@185.26.122.77/host1821032_hhrest?serverVersion=mariadb-10.5.8"</p>
+				</div>
+			</div>
+		</section>
+		<hr class="featurette-divider">
+
+		<div class="row featurette">
+			<div class="col-md-7">
+				<h2 class="fw-light py-3">Entity</h2>
+				<p class="lead">php bin/console make:entity "entity name"</p>
+				~
+				<p class="lead">Объект содержащий данные о таблице удалённой базы данных. В данном случае MySQL</p>
+			</div>
+			<div class="col-md-5">
+				<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto" src="{{ asset('images/entity.jpg') }}">
+			</div>
+		</div>
+		<hr>
+
+		<section class="py-5 container">
+			<div class="row">
+				<div class="col mx-auto">
+					<h1 class="fw-light py-3">Migration</h1>
+					<p class="lead text-center text-muted"> - php bin/console make:migration /<br>/ php bin/console doctrine:migrations:migrate -</p>
+					~
+					<p class="lead text-center text-muted">Перенос и соответствие образованных entity с таблицами MySQL (возможно потерять данные в таблицах)</p>
+				</div>
+			</div>
+		</section>
+		<hr class="featurette-divider">
+
+		<div class="row featurette">
+			<div class="col-md-7 order-md-2">
+				<h2 class="fw-light py-3" style="">Usage</h2>
+				<p class="lead">Используя Doctrine - (библиотеку работы с базами), происходит получение данных с связью по entity</p>
+			</div>
+			<div class="col-md-5 order-md-1">
+				<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto" src="{{ asset('images/usage.jpg') }}">
+			</div>
+		</div>
+	</div>
+</main>

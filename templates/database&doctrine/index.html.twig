@@ -1,35 +1,26 @@
 {% extends "base.html.twig" %}
 
-{% block title %}Database & Doctrine{% endblock %}
+	{% block title %} {{ title_name }} {% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-	<header class="mb-auto text-white">
-		<div class="navbar navbar-dark shadow-sm" style="background: #6c2d2c;">
-        	<div class="container">
-            	<a href="http://yourdwell.ru/" class="navbar-brand d-flex align-items-center">
-                	<strong>YourDwell</strong>
-				</a>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                	<a class="nav-link" aria-current="page" href="{{ path('homepage') }}">Главная страница</a>
-                    <a class="nav-link" href="{{ path('homepage') }}Каталог/" disabled>Каталог</a>
-                    <a class="nav-link" href="." disabled>Вернуться к резюме</a>
-                </nav>
-            </div>
-        </div> 
-    </header>
+	{% block stylesheets %}
+		{{ parent() }}
 
+        <link rel="stylesheet" type="text/css" href="/styles/navbar.css">
+        <link rel="stylesheet" type="text/css" href="/styles/carousel.css">
+	{% endblock %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+	{% block body %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/symfony/app/src/Controller/DatabaseDoctrineController.php'|file_link(0) }}">src/Controller/DatabaseDoctrineController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/symfony/app/templates/database_doctrine/index.html.twig'|file_link(0) }}">templates/database_doctrine/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %}
+		{% block header %}
+			{{ include("database&doctrine/header.html") }}
+		{% endblock %}
+
+		{% block main %}
+			{{ include("database&doctrine/main.html") }}
+		{% endblock %}
+
+		{% block footer %}
+			{{ include("database&doctrine/footer.html") }}
+		{% endblock %}
+
+	{% endblock %}

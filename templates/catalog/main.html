@@ -1,0 +1,47 @@
+<main>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Выбор соединения</h1>
+                <p class="lead text-muted">Выбор данной карты предоставит возможность ознакомления с описаниями метода соединения.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="justify-content-md-center row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for card in cards %}
+                {{ placeCards(card) }}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Примеры кода</h1>
+                <p class="lead text-muted">Ссылка на исходный код Symfony.</p>
+                <a href="https://github.com/Lavreek/yourdwell-symfony-app.git" style="color: grey;">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container marketing">
+        <div class="row justify-content-center" style="text-align: center;">
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{  asset('/images/symfony.png') }}"/>
+                <h2>Symfony CLI</h2>
+            </div>
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{  asset('/images/npm.svg') }}"/>
+                <h2>npm</h2>
+            </div>
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{  asset('/images/composer.png') }}"/>
+                <h2>Composer</h2>
+            </div>
+        </div>
+    </div> 
+</main>

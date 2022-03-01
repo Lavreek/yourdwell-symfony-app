@@ -1,0 +1,35 @@
+<header class="mb-auto text-white">
+    <div class="collapse" id="navbarHeader" style="background: linear-gradient(to top, #6c2d2c 45%, #212529 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">О странице</h4>
+                    <p class="text-muted">Это информационная страница представляет собой примеры исходных кодов, взаимодействие и разработку веб-приложений/страниц.</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Контакты</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-white">LavreekSoLacki@yandex.ru</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark shadow-sm" style="background: #6c2d2c;">
+        <div class="container">
+            <a href="http://yourdwell.ru/" class="navbar-brand d-flex align-items-center">
+                <strong>YourDwell</strong>
+            </a>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link" aria-current="page" href="{{ path('homepage') }}">Главная страница</a>
+                <a class="nav-link" href="{{ path('homepage') }}Каталог/" disabled>Каталог</a>
+                <a class="nav-link" href="." disabled>Вернуться к резюме</a>
+            </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>

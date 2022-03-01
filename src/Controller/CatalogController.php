@@ -11,8 +11,7 @@
 	class CatalogController extends AbstractController
 	{
 		const header_title = "YourDwell";
-		const page_title = "HH Catalog";
-		private $connection_type = "";
+		const title_name = "HH Catalog";
 
 		/**
 		* @Route("/Catalog")
@@ -23,10 +22,9 @@
 	    	$cards = $this->getDatabaseConnection($doctrine);
 
 	        return $this->render('catalog/index.html.twig', [
-	        	'cards' => $cards,
-            	'page_title' => CatalogController::page_title,
+	        	'title_name' => CatalogController::title_name,
             	'header_title' => CatalogController::header_title,
-            	'type' => null,
+	        	'cards' => $cards,
         	]);
 	    }
 
