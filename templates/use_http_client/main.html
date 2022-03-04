@@ -1,0 +1,35 @@
+<main>
+	<section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+            	<h4>HTTP Client</h4>
+            	<h5>json:</h5>
+                <p class="lead text-muted">
+					{{ http_array_string }}
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="album py-5 bg-light">
+        <div class="container">
+        	<h5 class="text-muted text-center py-2">Отображение</h5>
+            <div class="justify-content-md-center row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for card in http_client_cards %}
+                {{ placeCards(card) }}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="container py-2">
+	    <div class="row">
+			<div class="col-md-7">
+				<h2 class="fw-light py-3">Request</h2>
+				<p class="lead">Запрос отправленный по определённому адресу, получаемый данные. Объект будет содержать данные о таблице удалённой базы данных. В данном случае из примера без использования фреймворков.</p>
+			</div>
+			<div class="col-md-5">
+				<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image mx-auto" src="{{ asset('images/http_response.png') }}">
+			</div>
+		</div>
+    </div>
+
+</main>

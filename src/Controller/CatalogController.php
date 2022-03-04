@@ -6,7 +6,7 @@
 	use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 	use App\Entity\SymfonyTabs;
 	use Doctrine\Persistence\ManagerRegistry;
-	use Symfony\Component\HttpClient\HttpClient;
+	
 
 	class CatalogController extends AbstractController
 	{
@@ -17,8 +17,7 @@
 		* @Route("/Catalog")
 		*/
 	    public function index(ManagerRegistry $doctrine): Response
-	    {	
-	    	$this->getHTTPClientConnection();
+	    {
 	    	$cards = $this->getDatabaseConnection($doctrine);
 
 	        return $this->render('catalog/index.html.twig', [
@@ -40,16 +39,6 @@
         	}
 
         	return $array;
-	    }
-
-	    private function getHTTPClientConnection()
-	    {
-	    	$client = HttpClient::create();
-	    	$response = $client->request('GET', 'http://yourdwell.ru/methods/calls.php?', [
-			    'query' => [
-			        'getTags' => 'all',
-			    ],
-			]);
 	    }
 	}
 ?>

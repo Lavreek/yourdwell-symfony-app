@@ -17,6 +17,7 @@
         public function cardConstruction(string $name)
         {
             $href = str_replace(" / ", "&", $name);
+            $href = str_replace(" ", "", $name);
             echo "
             <div class='col' style='text-align:center;'>
                 <div class='card shadow-sm'>

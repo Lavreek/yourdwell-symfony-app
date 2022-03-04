@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+	{% block title %} {{ title_name }} {% endblock %}
+
+	{% block stylesheets %}
+		{{ parent() }}
+
+        <link rel="stylesheet" type="text/css" href="/styles/navbar.css">
+	{% endblock %}
+
+
+{% block body %}
+
+	{% block header %}
+		{{ include('use_http_client/header.html') }}
+	{% endblock %}
+
+	{% block main %}
+		{{ include('use_http_client/main.html') }}
+	{% endblock %}
+
+	{% block footer %}
+		{{ include('use_http_client/footer.html') }}
+	{% endblock %}
+
+{% endblock %}

@@ -14,6 +14,10 @@ Database&Doctrine:
     path: /Database&Doctrine
     controller: App\Controller\DatabaseDoctrineController::index
 
+Use&HTTPClient:
+    path: /HTTPClient
+    controller: App\Controller\UseHttpClientController::index
+
 symfony_desc_get:
     path: /symfonydesc
     controller: App\Controller\SymfonyDescriptionController::getSymfonyDesc

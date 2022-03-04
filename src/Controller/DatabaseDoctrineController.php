@@ -16,7 +16,6 @@ class DatabaseDoctrineController extends AbstractController
         return $this->render('database&doctrine/index.html.twig', [
             'title_name' => 'Database & Doctrine',
             'header_title' => DatabaseDoctrineController::header_title,
-
         ]);
     }
 }
