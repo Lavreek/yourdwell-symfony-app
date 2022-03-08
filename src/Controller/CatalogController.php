@@ -35,7 +35,7 @@
         	$symfony_tabs = $repository->findAll();
 
         	foreach ($symfony_tabs as $key => $value) {
-        		array_push($array, $value->getStCaption());
+        		array_push($array, ['href' => $value->getStHref(), 'value' => $value->getStValue()]);
         	}
 
         	return $array;

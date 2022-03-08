@@ -14,14 +14,12 @@
             ];
         }
 
-        public function cardConstruction(string $name)
+        public function cardConstruction(array $cards)
         {
-            $href = str_replace(" / ", "&", $name);
-            $href = str_replace(" ", "", $name);
             echo "
             <div class='col' style='text-align:center;'>
                 <div class='card shadow-sm'>
-                    <p><a class='text-dark nav-link' href='./".$href."'>".$name."</a></p>
+                    <p><a class='text-dark nav-link' href='./".$cards['href']."'>".$cards['value']."</a></p>
                 </div>
             </div>";
         }
