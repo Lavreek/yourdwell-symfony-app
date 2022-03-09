@@ -15,7 +15,7 @@
         	<h5 class="text-muted text-center py-2">Отображение</h5>
             <div class="justify-content-md-center row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {% for card in http_client_cards %}
-                {{ placeCards(card) }}
+                {{ jsonCards(card) }}
             {% endfor %}
             </div>
         </div>
