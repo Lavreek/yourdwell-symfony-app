@@ -1,10 +1,15 @@
 <header class="mb-auto">
 	<div>
-		<h3 class="float-md-start mb-0">{{ header_title }}</h3>
+		<div>
+			<a class="nav-masthead" href="http://yourdwell.ru/">
+				<h5 class="nav-link text-white float-md-start mb-0">{{ header_title }}<span class="lead text-muted"> symfony</span></h5>
+			</a>
+		</div>
 		<nav class="nav nav-masthead justify-content-center float-md-end">
+			
 			<a class="nav-link active" aria-current="page" href="{{ path('homepage') }}">Главная страница</a>
-			<a class="nav-link" href="{{ path('homepage') }}Каталог/">Каталог</a>
-			<a class="nav-link" href=".">Вернуться к резюме</a>
+			<a class="nav-link" href="{{ path('homepage') }}">Каталог</a>
+			<a class="nav-link" href="https://lobnya.hh.ru/resume/263127a3ff09c054890039ed1f56784e496664">Вернуться к резюме</a>
 		</nav>
 	</div>
 </header>
